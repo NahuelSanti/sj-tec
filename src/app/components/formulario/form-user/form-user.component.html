@@ -1,0 +1,68 @@
+<div class="col-12 mt-5">
+  <form [formGroup]="dataUser" (ngSubmit)="onSubmit()">
+    <h4>Datos Personales</h4>
+    <div>
+      <label for="">Nombre</label>
+      <input
+        maxlength="4"
+        minlength="0"
+        type="text"
+        id="nombre"
+        placeholder="Escribi tu nombre"
+        formControlName="nombre"
+        required
+      />
+      <div
+        class="text-danger"
+        *ngIf="
+          dataUser.controls['nombre'].hasError('required') &&
+          (dataUser.controls['nombre'].dirty ||
+            dataUser.controls['nombre'].touched)
+        "
+      >
+        Este campo es requerido
+      </div>
+    </div>
+    <div>
+      <label for="">Apellido</label>
+      <input
+        type="text"
+        id="apellido"
+        placeholder="Escribi tu apellido"
+        formControlName="apellido"
+        required
+      />
+      <div
+        class="text-danger"
+        *ngIf="
+          dataUser.controls['apellido'].hasError('required') &&
+          (dataUser.controls['apellido'].dirty ||
+            dataUser.controls['apellido'].touched)
+        "
+      >
+        Este campo es requerido
+      </div>
+    </div>
+    <div>
+      <label for="">email</label>
+      <input
+        type="email"
+        id="email"
+        placeholder="Escribi tu email"
+        formControlName="email"
+        required
+      />
+      <div
+        class="text-danger"
+        *ngIf="
+          dataUser.controls['email'].hasError('required') &&
+          (dataUser.controls['email'].dirty ||
+            dataUser.controls['email'].touched)
+        "
+      >
+        Este campo es requerido
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>

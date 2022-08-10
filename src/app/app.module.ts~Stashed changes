@@ -1,0 +1,31 @@
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { FormularioModule } from './components/formulario/formulario.module';
+import { GameModule } from './components/game/game.module';
+import { LayoutModule } from './components/layout/layout.module';
+import { ArticulosModule } from './components/articulos/articulos.module';
+import { HttpClientModule } from '@angular/common/http';
+
+@NgModule({
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    LayoutModule,
+    GameModule,
+    ArticulosModule,
+    RouterModule,
+    FormularioModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
+  providers: [],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}

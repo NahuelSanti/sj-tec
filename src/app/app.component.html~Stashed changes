@@ -1,0 +1,9 @@
+<router-outlet></router-outlet>
+<!-- <app-recursos></app-recursos> -->
+<!-- <div class="container my-5 text-center">
+  <app-game-control (gameStarted)="onStartCounter($event)"></app-game-control>
+</div>
+
+<div class="container my-5 text-center">
+  <app-odd *ngFor="let oddNum of oddNumbers" [oddNumber]="oddNum"></app-odd>
+</div> -->

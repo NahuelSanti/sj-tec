@@ -1,0 +1,23 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { AppComponent } from './app.component';
+import { RecursosComponent } from './components/articulos/recursos/recursos.component';
+import { FormUserComponent } from './components/formulario/form-user/form-user.component';
+import { NoticiasComponent } from './components/formulario/noticias/noticias.component';
+import { FooterComponent } from './components/layout/footer/footer.component';
+import { HeaderComponent } from './components/layout/header/header.component';
+
+const routes: Routes = [
+  { path: '', component: HeaderComponent },
+  { path: 'header', component: FooterComponent },
+  { path: 'form-user', component: FormUserComponent },
+  { path: 'noticias', component: NoticiasComponent },
+  // { path: 'articulos', component: RecursosComponent },
+  { path: '**', redirectTo: '' },
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
+})
+export class AppRoutingModule {}

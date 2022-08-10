@@ -1,0 +1,21 @@
+import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+})
+export class AppComponent {
+  title = 'angular-sjtec';
+
+  oddNumbers: number[] = [];
+  evenNumbers: number[] = [];
+
+  onStartCounter(incrementingNum: number) {
+    if (incrementingNum % 2 === 0) {
+      this.evenNumbers.push(incrementingNum);
+    } else {
+      this.oddNumbers.push(incrementingNum);
+    }
+  }
+}
